@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Buy{% endblock title %}
+
+{% block body %}
+
+<form method="post" action="/buy_submachinegun">
+    {% csrf_token %}
+    <div class="container mx-0 my-3">
+      <label for="username">Enter your Name : </label>
+      <input type="text" class="form-control" name="username" id="username" aria-describedby="username" placeholder="Enter your Name">
+      
+    </div>
+    <div class="container mx-0 my-3">
+      <label for="exampleInputEmail1">Email : </label>
+      <input type="email" class="form-control" name='buyer_email' id="email1" placeholder="Enter your Email">
+    </div>
+    <div class="container mx-0 my-3">
+      <label for="exampleInputEmail1">Enter the Delivery Address : </label>
+      <input type="text" class="form-control" name='address' id="address" placeholder="Enter the Delivery Address">
+    </div>
+    
+    
+    
+    <div class="container mx-0 my-3">
+    <label for="guns">Choose the gun you want to Buy : </label>
+  <select name="selectedPistol" id="pistol">
+    <option value=""></option>
+    <option value="MAC10" name="MAC10">MAC10</option>
+    <option value="VECTOR" name="VECTOR">VECTOR</option>
+    <option value="THOMPSON" name="THOMPSON">THOMPSON</option>
+    <option value="VSS" name="VSS">VSS</option>
+    <option value="MP5" name="MP5">MP5</option>
+    <option value="UMP" name="UMP">UMP</option>
+    <option value="MP40" name="MP40">MP40</option>
+    <option value="P90" name="P90">P90</option>
+  </select></div>
+  <div class="container mx-0 my-3">
+    <label for="paymentMethod">Choose the Payment Method : </label>
+    <select name="paymentMethod" id="paymentMethod">
+        <option value="PayPal"></option>
+        <option value="PayPal" name="PayPal">PayPal</option>
+        <option value="UPI" name="UPI">UPI</option>
+        <option value="Paytm" name="Paytm">Paytm</option>
+        <option value="Bitcoin" name="Bitcoin">Bitcoin</option>
+      </select>
+  </div>
+  <br>
+  
+  <button class="btn btn-secondary" type="submit">Confirm</button>&nbsp &nbsp &nbsp &nbsp
+  <a href='/payment_smg'><button type="button" class="btn btn-secondary">Proceed</button></a>
+  
+  </form>
+
+
+{% endblock body %}

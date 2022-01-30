@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Payment{% endblock title %}
+
+{% block body %}
+
+<center><h3 class="container mx-3 my-2" >Gun you are going to purchase</h3></center>
+<div class="container mx-3 my-3">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="\static\rifles\{{image}}" class="d-block w-100" alt="..." height="230">
+
+        <div class="card-body">
+          <p class="card-text">Name of Costumer - {{name}}<br>Product Name - {{gun_name}}<br>Cost - {{cost}}<br>Payment Mode - {{mode}}<br></p>
+          
+          <div class="btn-group">
+            <a href={{link}}><button type="button" class="btn btn-sm btn-outline-secondary" href='/buy'>More info</button></a>
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="container">
+    <form method="post" action="/payment_rifle">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="paymentInfo">{{suffix}} : </label>
+          <input type="paymentInfo" class="form-control" id="paymentInfo" aria-describedby="paymentInfo" placeholder="" name="mode_info">
+          
+        <br><button type="submit" class="btn btn-primary">Place Your Order and Pay</button>
+      </form>
+</div>
+
+{% endblock body %}

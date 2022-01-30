@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+
+
+{% block body %}
+
+<div class="container-fluid my-4">
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="\static\image\pic1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Stark Industries</h5>
+          <p>Rifles, Shotguns, Sniper Rifles, Submachine Guns and many more</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="\static\image\pic2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Rifles</h5>
+          <p>Rifles - SCAR, Groza, Ak47, Famas etc.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="\static\image\pic3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Snipers</h5>
+          <p>Snipers - AWM, MA2B, Kar98</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</div>
+
+
+<div class="container my-3 ">
+<h1 class="my-2" align="center"><u>Select your Guns</u></h1><br>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+  <div class="col">
+    <div class="card shadow-sm">
+      
+      <img src="\static\image\pic5.jpg" class="d-block w-100" alt="..." height="230">
+      <div class="card-body">
+        <p class="card-text">A pistol is a handgun, more specifically one with the chamber integral to its gun barrel, though in common usage the two terms are often used interchangeably.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <a href='/buy_pistol'><button type="button" class="btn btn-sm btn-outline-secondary" href='/buy'>Buy from it</button></a>
+            <a href="https://en.wikipedia.org/wiki/Pistol"><button type="button" class="btn btn-sm btn-outline-secondary">More info</button></a>
+          </div>
+          <small class="text-muted">Starting from - ₹25,000</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow-sm">
+      <img src="\static\image\pic4.jpg" class="d-block w-100" alt="..." height="230">
+
+      <div class="card-body">
+        <p class="card-text">An assault rifle is a selective fire rifle that uses an intermediate cartridge and a detachable magazine.Assault rifles were first put into mass production and accepted into widespread service during World War II</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <a href='/buy_rifle'><button type="button" class="btn btn-sm btn-outline-secondary">Buy from it</button></a>
+            <a href="https://en.wikipedia.org/wiki/Assault_rifle"><button type="button" class="btn btn-sm btn-outline-secondary">More info</button></a>
+          </div>
+          <small class="text-muted">Starting from- ₹50,000</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow-sm">
+      <img src="\static\image\pic6.jfif" class="d-block w-100" alt="..." height="230">
+
+      <div class="card-body">
+        <p class="card-text">A shotgun is a long-barreled firearm designed to shoot a straight-walled cartridge known as a shotshell, which usually discharges numerous small pellet-like spherical sub-projectiles called shot, or sometimes a single solid projectile called a slug.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <a href='/buy_shotgun'><button type="button" class="btn btn-sm btn-outline-secondary">Buy from it</button></a>
+            <a href="https://en.wikipedia.org/wiki/Shotgun"><button type="button" class="btn btn-sm btn-outline-secondary">More info</button></a>
+          </div>
+          <small class="text-muted">Starting from - ₹6,000</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card shadow-sm">
+      <img src="\static\image\pic7.jpg" class="d-block w-100" alt="..." height="230">
+
+      <div class="card-body">
+        <p class="card-text">A sniper rifle is a high-precision, long-range rifle. Requirements include accuracy, reliability, mobility, concealment and optics for anti-personnel, anti-materiel and surveillance uses of the military sniper.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <a href='/buy_snipers'><button type="button" class="btn btn-sm btn-outline-secondary">Buy from it</button></a>
+            <a href="https://en.wikipedia.org/wiki/Sniper_rifle"><button type="button" class="btn btn-sm btn-outline-secondary">More info</button></a>
+          </div>
+          <small class="text-muted">Starting from - ₹5,00,000</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow-sm">
+      <img src="\static\image\pic8.jfif" class="d-block w-100" alt="..." height="230">
+
+      <div class="card-body">
+        <p class="card-text">A submachine gun, abbreviated SMG, is a magazine-fed, automatic carbine designed to fire handgun cartridges. The term "submachine gun" was coined by John T. Thompson, the inventor of the Thompson submachine gun.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <a href='/buy_submachinegun'><button type="button" class="btn btn-sm btn-outline-secondary">Buy from it</button></a>
+            <button type="button" class="btn btn-sm btn-outline-secondary">More info</button>
+          </div>
+          <small class="text-muted">Starting from - ₹25,000</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+{% endblock body %}
+
+

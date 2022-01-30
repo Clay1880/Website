@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Buy{% endblock title %}
+
+{% block body %}
+
+<form method="post" action="/buy_shotgun">
+    {% csrf_token %}
+    <div class="container mx-0 my-3">
+      <label for="username">Enter your Name : </label>
+      <input type="text" class="form-control" name="username" id="username" aria-describedby="username" placeholder="Enter your Name">
+      
+    </div>
+    <div class="container mx-0 my-3">
+      <label for="exampleInputEmail1">Email : </label>
+      <input type="email" class="form-control" name='buyer_email' id="email1" placeholder="Enter your Email">
+    </div>
+    <div class="container mx-0 my-3">
+      <label for="exampleInputEmail1">Enter the Delivery Address : </label>
+      <input type="text" class="form-control" name='address' id="address" placeholder="Enter the Delivery Address">
+    </div>
+    
+    
+    
+    <div class="container mx-0 my-3">
+    <label for="guns">Choose the gun you want to Buy : </label>
+  <select name="selectedPistol" id="pistol">
+    <option value=""></option>
+    <option value="M1887" name="M1887">M1887</option>
+    <option value="MAG-7" name="MAG-7">MAG-7</option>
+    <option value="M1014" name="M1014">M1014</option>
+    <option value="Kel-Tec KSG" name="Kel-Tec KSG">Kel-Tec KSG</option>
+  </select></div>
+  <div class="container mx-0 my-3">
+    <label for="paymentMethod">Choose the Payment Method : </label>
+    <select name="paymentMethod" id="paymentMethod">
+        <option value="PayPal"></option>
+        <option value="PayPal" name="PayPal">PayPal</option>
+        <option value="UPI" name="UPI">UPI</option>
+        <option value="Paytm" name="Paytm">Paytm</option>
+        <option value="Bitcoin" name="Bitcoin">Bitcoin</option>
+      </select>
+  </div>
+  <br>
+  
+  <button class="btn btn-secondary" type="submit">Confirm</button>&nbsp &nbsp &nbsp &nbsp
+  <a href='/payment_shotgun'><button type="button" class="btn btn-secondary">Proceed</button></a>
+  
+  </form>
+
+
+{% endblock body %}
